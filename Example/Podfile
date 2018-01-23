@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'HTSocket_Example' do
+  pod 'HTSocket', :path => '../'
+
+  target 'HTSocket_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
