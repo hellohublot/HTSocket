@@ -1,0 +1,916 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		088CAB5F7AF09A3C1BF1642A1A35AF2D /* HTSocket-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DFBD1E754AC19CDF86F53C0B49FF9F70 /* HTSocket-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BEFDF1D74CB0EC6BE623882F9DF9A4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8E2D632CADFEBE217900FD1D4F3ABF /* Foundation.framework */; };
+		2612091F3985F5DE6D2F9B4B8C5D4762 /* TCP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC9622A9CFE6A70EF6A406EA28FCFE /* TCP.swift */; };
+		326D0FF5CB595DF7FBC7A42FFA305C03 /* Pods-HTProxyExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DEE8FA4382B1CFE05FEFF39B03C1CC /* Pods-HTProxyExample-dummy.m */; };
+		4CA87EC737CEB410DF0F9A5C4357BAB1 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102096C88191819E134662DEA99482C5 /* Address.swift */; };
+		517C3E6E0B7AAE22CB3D6DCA8000D524 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8E2D632CADFEBE217900FD1D4F3ABF /* Foundation.framework */; };
+		552ECFCFBC8E82AD2EFC0985B63E606D /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102096C88191819E134662DEA99482C5 /* Address.swift */; };
+		5A004F955424D7170B9BA6D5FAF07BB4 /* WebProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E10A5EC5524C80DA29AA238CABEA116 /* WebProxy.swift */; };
+		60959C181231D19EF001CFE3B35E496C /* IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE21EB866577B57D16FCC4A58FC625 /* IO.swift */; };
+		706FAC5B53EF3C2ED7ED2D3E806D2FF8 /* TLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4717E827E4E26B2E8FAD409A591C46 /* TLS.swift */; };
+		7125EE55270C711531C3E3D1CAAA30E3 /* TCP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC9622A9CFE6A70EF6A406EA28FCFE /* TCP.swift */; };
+		77267FA20F14973B12DF06954FE99B68 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEC557ABB2D0F79AAC9D04816DF1A82 /* Socket.swift */; };
+		7C9AEECA787CBED9B747AC1EAD7F07D2 /* HTSocket-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8435C938D8BCB9EA3A6E824E88A48 /* HTSocket-macOS-dummy.m */; };
+		82095CDDB327C155C5ABD8A97D90F064 /* HTSocket-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ACD7F27D28D92F7FFDBD530A64D1940B /* HTSocket-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		896EDB24C6395915CE72CFF4E454B0CF /* HTSocket-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED54C42BE648023E16DE9048957958D9 /* HTSocket-iOS-dummy.m */; };
+		9057D8BFDCB59267EEBBAD24C83D4914 /* Pods-HTSocketExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCC5518F55A6F233C73282D089BAA33 /* Pods-HTSocketExample-dummy.m */; };
+		A7E621E4D70B8FE45992DF68417BE549 /* Pods-HTProxyExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BEA13E611A4E9737AF1F3959C788B2B /* Pods-HTProxyExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE2A286AF3183F7B79A32563FD11FBA3 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F7EC877508FD6F712E13FE7BA0A274 /* Log.swift */; };
+		B0E75BD5E731E5040446BC4F2563464E /* WebProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E10A5EC5524C80DA29AA238CABEA116 /* WebProxy.swift */; };
+		BA7735D8A34677B5D9FB821FED1EE3DD /* TLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4717E827E4E26B2E8FAD409A591C46 /* TLS.swift */; };
+		C073236355C9B63DD74D9119FC7EF1BB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDAA23DDA8E082FC77E38FA01601C8F /* Cocoa.framework */; };
+		C6B4A1C6679217029FD21A88E72D86FA /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEC557ABB2D0F79AAC9D04816DF1A82 /* Socket.swift */; };
+		C7C30353D694CFB5C4274FCCD391EA15 /* Pods-HTSocketExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC0FBC8E5AC1A149FCC2B4A1774566B /* Pods-HTSocketExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD600989F0559F9ECD0CE637CA26C4CC /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F7EC877508FD6F712E13FE7BA0A274 /* Log.swift */; };
+		D50D805B1752DF0FB23B88DD9D09CC30 /* UDP.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E0BBFE3F06F87500A736F51116491 /* UDP.swift */; };
+		F5F6A28DEE54C88FD6DDED800B6D5ADB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDAA23DDA8E082FC77E38FA01601C8F /* Cocoa.framework */; };
+		F8EE35984C1AE66BCAFCFFB215F9D8D5 /* UDP.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E0BBFE3F06F87500A736F51116491 /* UDP.swift */; };
+		FD48AE1F62B2F7DFD5FBFDEB334D09BE /* IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE21EB866577B57D16FCC4A58FC625 /* IO.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2BF8C0009C4D446B9882D081B7B72C20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C8AC391DC6FC78EAC8142533E380D0C;
+			remoteInfo = "HTSocket-iOS";
+		};
+		FD6689C2E74C47F311ECCF83131AA3D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7CAD59380E544FD7147BE889E4BB1393;
+			remoteInfo = "HTSocket-macOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0FFC9622A9CFE6A70EF6A406EA28FCFE /* TCP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TCP.swift; path = HTSocket/Classes/TCP.swift; sourceTree = "<group>"; };
+		102096C88191819E134662DEA99482C5 /* Address.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Address.swift; path = HTSocket/Classes/Address.swift; sourceTree = "<group>"; };
+		10DEE8FA4382B1CFE05FEFF39B03C1CC /* Pods-HTProxyExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HTProxyExample-dummy.m"; sourceTree = "<group>"; };
+		146FD35E6CF594D480EB4BD32AA9E852 /* HTSocket-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "HTSocket-iOS.modulemap"; sourceTree = "<group>"; };
+		203A98261868EE4D9E1A675C1AA3845B /* Pods-HTSocketExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-HTSocketExample.modulemap"; sourceTree = "<group>"; };
+		23947E3F7AD637256D0C23DC0AD445D9 /* HTSocket-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "HTSocket-iOS.xcconfig"; sourceTree = "<group>"; };
+		2F6E26804ADAFCF3B50D5AA4C2C29690 /* Pods-HTProxyExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HTProxyExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		315C30811D4000162939E602EA82997B /* Pods_HTSocketExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HTSocketExample.framework; path = "Pods-HTSocketExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		35CE4B59F5BAD01A1F373346A6E1866C /* Pods-HTSocketExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HTSocketExample.debug.xcconfig"; sourceTree = "<group>"; };
+		37A8435C938D8BCB9EA3A6E824E88A48 /* HTSocket-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "HTSocket-macOS-dummy.m"; path = "../HTSocket-macOS/HTSocket-macOS-dummy.m"; sourceTree = "<group>"; };
+		3DEC557ABB2D0F79AAC9D04816DF1A82 /* Socket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Socket.swift; path = HTSocket/Classes/Socket.swift; sourceTree = "<group>"; };
+		50EE21EB866577B57D16FCC4A58FC625 /* IO.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IO.swift; path = HTSocket/Classes/IO.swift; sourceTree = "<group>"; };
+		56460DAB73484C1227D770F7F02311BE /* Pods-HTProxyExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HTProxyExample-resources.sh"; sourceTree = "<group>"; };
+		5AA4709DEC3C3EE0A2ACE6D0287D4613 /* Pods-HTProxyExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HTProxyExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		5FC2919501A7F0275C94B60564B983FD /* HTSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HTSocket.framework; path = "HTSocket-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6126877A8C55369B8BC9C369D683EAA2 /* Pods-HTProxyExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-HTProxyExample.modulemap"; sourceTree = "<group>"; };
+		6DBD5001BF72173F97EC00BF4DBA702A /* Pods_HTProxyExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HTProxyExample.framework; path = "Pods-HTProxyExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		714426A8F3DBBB949A03F05DD1E88A0B /* Pods-HTSocketExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HTSocketExample.release.xcconfig"; sourceTree = "<group>"; };
+		7958FC790A560B20351BA0051A07DA4E /* Pods-HTSocketExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HTSocketExample-frameworks.sh"; sourceTree = "<group>"; };
+		7BEA13E611A4E9737AF1F3959C788B2B /* Pods-HTProxyExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HTProxyExample-umbrella.h"; sourceTree = "<group>"; };
+		7E10A5EC5524C80DA29AA238CABEA116 /* WebProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebProxy.swift; path = HTSocket/Classes/WebProxy.swift; sourceTree = "<group>"; };
+		7EBE5C69FAD14F272CFA95F34E3C3178 /* HTSocket-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "HTSocket-macOS-prefix.pch"; path = "../HTSocket-macOS/HTSocket-macOS-prefix.pch"; sourceTree = "<group>"; };
+		812FCB540C411C19DFA6B25F9D187621 /* Pods-HTSocketExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HTSocketExample-resources.sh"; sourceTree = "<group>"; };
+		86F9420CE4F7FD49C9AF71A426C83A33 /* HTSocket-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "HTSocket-macOS.modulemap"; path = "../HTSocket-macOS/HTSocket-macOS.modulemap"; sourceTree = "<group>"; };
+		8C4717E827E4E26B2E8FAD409A591C46 /* TLS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TLS.swift; path = HTSocket/Classes/TLS.swift; sourceTree = "<group>"; };
+		8D78C5AD8D4539ECDF7BF12B1BCB4E9D /* Pods-HTProxyExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HTProxyExample.release.xcconfig"; sourceTree = "<group>"; };
+		8DA1D39BC82258433E16F0D2303F3164 /* Pods-HTProxyExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HTProxyExample-frameworks.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9C2A542920213D447C4C20B181839E35 /* Pods-HTSocketExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HTSocketExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		ACD7F27D28D92F7FFDBD530A64D1940B /* HTSocket-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HTSocket-iOS-umbrella.h"; sourceTree = "<group>"; };
+		B133B67294B395D4FA794C1A589454C3 /* HTSocket-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HTSocket-iOS-prefix.pch"; sourceTree = "<group>"; };
+		B8CB56661662AB144CAE2B3AAA0243BF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../HTSocket-macOS/Info.plist"; sourceTree = "<group>"; };
+		C0A887502CEEBE971EF489D9BD6411D5 /* HTSocket-macOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "HTSocket-macOS.xcconfig"; path = "../HTSocket-macOS/HTSocket-macOS.xcconfig"; sourceTree = "<group>"; };
+		C8F7EC877508FD6F712E13FE7BA0A274 /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Log.swift; path = HTSocket/Classes/Log.swift; sourceTree = "<group>"; };
+		CC50057B1864D68547295DE8FEC0E779 /* HTSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HTSocket.framework; path = "HTSocket-macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDDAA23DDA8E082FC77E38FA01601C8F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		D8F62C7EE817316E4652406807E65ECC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DADD150D200DAC8BC049750B7C10F9C8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB8E2D632CADFEBE217900FD1D4F3ABF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DD0E4ED4EE8B7238C8F8328850F741E1 /* Pods-HTSocketExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HTSocketExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DDC0FBC8E5AC1A149FCC2B4A1774566B /* Pods-HTSocketExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HTSocketExample-umbrella.h"; sourceTree = "<group>"; };
+		DFBD1E754AC19CDF86F53C0B49FF9F70 /* HTSocket-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "HTSocket-macOS-umbrella.h"; path = "../HTSocket-macOS/HTSocket-macOS-umbrella.h"; sourceTree = "<group>"; };
+		E99E0BBFE3F06F87500A736F51116491 /* UDP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UDP.swift; path = HTSocket/Classes/UDP.swift; sourceTree = "<group>"; };
+		EBC64C5BEFEF2AA9357CB215F3C6323C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED54C42BE648023E16DE9048957958D9 /* HTSocket-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HTSocket-iOS-dummy.m"; sourceTree = "<group>"; };
+		F7D9FE082A7EE7FF634CF7AB89CB764C /* Pods-HTProxyExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HTProxyExample.debug.xcconfig"; sourceTree = "<group>"; };
+		FCCC5518F55A6F233C73282D089BAA33 /* Pods-HTSocketExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HTSocketExample-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03FEABAF9F9A1846D7CBC6F449803EE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C073236355C9B63DD74D9119FC7EF1BB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19FA3534D26C8BC53455FE1F3FF248AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BEFDF1D74CB0EC6BE623882F9DF9A4C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B49358A13312EE4EC6A56500F9B46A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5F6A28DEE54C88FD6DDED800B6D5ADB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AF67575A522AC52F7810478345E52DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				517C3E6E0B7AAE22CB3D6DCA8000D524 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		126EB0198D87500FB42139C94461F44E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E37773E1D24FB7EEF229E76800C653EF /* Pods-HTProxyExample */,
+				1C109BBE4DEC4F516EB0E34A7AB0C147 /* Pods-HTSocketExample */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		1C109BBE4DEC4F516EB0E34A7AB0C147 /* Pods-HTSocketExample */ = {
+			isa = PBXGroup;
+			children = (
+				EBC64C5BEFEF2AA9357CB215F3C6323C /* Info.plist */,
+				203A98261868EE4D9E1A675C1AA3845B /* Pods-HTSocketExample.modulemap */,
+				DD0E4ED4EE8B7238C8F8328850F741E1 /* Pods-HTSocketExample-acknowledgements.markdown */,
+				9C2A542920213D447C4C20B181839E35 /* Pods-HTSocketExample-acknowledgements.plist */,
+				FCCC5518F55A6F233C73282D089BAA33 /* Pods-HTSocketExample-dummy.m */,
+				7958FC790A560B20351BA0051A07DA4E /* Pods-HTSocketExample-frameworks.sh */,
+				812FCB540C411C19DFA6B25F9D187621 /* Pods-HTSocketExample-resources.sh */,
+				DDC0FBC8E5AC1A149FCC2B4A1774566B /* Pods-HTSocketExample-umbrella.h */,
+				35CE4B59F5BAD01A1F373346A6E1866C /* Pods-HTSocketExample.debug.xcconfig */,
+				714426A8F3DBBB949A03F05DD1E88A0B /* Pods-HTSocketExample.release.xcconfig */,
+			);
+			name = "Pods-HTSocketExample";
+			path = "Target Support Files/Pods-HTSocketExample";
+			sourceTree = "<group>";
+		};
+		1FCDC122CF403B744538497EB71685F2 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0DA87404F70FC366138C4288F51DE3F /* HTSocket */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		2EDFAB15A7E74F864EB353FCB5A57006 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				CDDAA23DDA8E082FC77E38FA01601C8F /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		3AEF7D761E8EA8419BB4A7000AB770CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C918DD0468B798DBE7EEDD4C9D4170B /* iOS */,
+				2EDFAB15A7E74F864EB353FCB5A57006 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				1FCDC122CF403B744538497EB71685F2 /* Development Pods */,
+				3AEF7D761E8EA8419BB4A7000AB770CB /* Frameworks */,
+				7DD71C248D567DD3819C0CED38F64285 /* Products */,
+				126EB0198D87500FB42139C94461F44E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7DD71C248D567DD3819C0CED38F64285 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5FC2919501A7F0275C94B60564B983FD /* HTSocket.framework */,
+				CC50057B1864D68547295DE8FEC0E779 /* HTSocket.framework */,
+				6DBD5001BF72173F97EC00BF4DBA702A /* Pods_HTProxyExample.framework */,
+				315C30811D4000162939E602EA82997B /* Pods_HTSocketExample.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C918DD0468B798DBE7EEDD4C9D4170B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DB8E2D632CADFEBE217900FD1D4F3ABF /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C2B9D380EEA8E1E4CC21EEE1E6FCC172 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				146FD35E6CF594D480EB4BD32AA9E852 /* HTSocket-iOS.modulemap */,
+				23947E3F7AD637256D0C23DC0AD445D9 /* HTSocket-iOS.xcconfig */,
+				ED54C42BE648023E16DE9048957958D9 /* HTSocket-iOS-dummy.m */,
+				B133B67294B395D4FA794C1A589454C3 /* HTSocket-iOS-prefix.pch */,
+				ACD7F27D28D92F7FFDBD530A64D1940B /* HTSocket-iOS-umbrella.h */,
+				86F9420CE4F7FD49C9AF71A426C83A33 /* HTSocket-macOS.modulemap */,
+				C0A887502CEEBE971EF489D9BD6411D5 /* HTSocket-macOS.xcconfig */,
+				37A8435C938D8BCB9EA3A6E824E88A48 /* HTSocket-macOS-dummy.m */,
+				7EBE5C69FAD14F272CFA95F34E3C3178 /* HTSocket-macOS-prefix.pch */,
+				DFBD1E754AC19CDF86F53C0B49FF9F70 /* HTSocket-macOS-umbrella.h */,
+				D8F62C7EE817316E4652406807E65ECC /* Info.plist */,
+				B8CB56661662AB144CAE2B3AAA0243BF /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/HTSocket-iOS";
+			sourceTree = "<group>";
+		};
+		E37773E1D24FB7EEF229E76800C653EF /* Pods-HTProxyExample */ = {
+			isa = PBXGroup;
+			children = (
+				DADD150D200DAC8BC049750B7C10F9C8 /* Info.plist */,
+				6126877A8C55369B8BC9C369D683EAA2 /* Pods-HTProxyExample.modulemap */,
+				2F6E26804ADAFCF3B50D5AA4C2C29690 /* Pods-HTProxyExample-acknowledgements.markdown */,
+				5AA4709DEC3C3EE0A2ACE6D0287D4613 /* Pods-HTProxyExample-acknowledgements.plist */,
+				10DEE8FA4382B1CFE05FEFF39B03C1CC /* Pods-HTProxyExample-dummy.m */,
+				8DA1D39BC82258433E16F0D2303F3164 /* Pods-HTProxyExample-frameworks.sh */,
+				56460DAB73484C1227D770F7F02311BE /* Pods-HTProxyExample-resources.sh */,
+				7BEA13E611A4E9737AF1F3959C788B2B /* Pods-HTProxyExample-umbrella.h */,
+				F7D9FE082A7EE7FF634CF7AB89CB764C /* Pods-HTProxyExample.debug.xcconfig */,
+				8D78C5AD8D4539ECDF7BF12B1BCB4E9D /* Pods-HTProxyExample.release.xcconfig */,
+			);
+			name = "Pods-HTProxyExample";
+			path = "Target Support Files/Pods-HTProxyExample";
+			sourceTree = "<group>";
+		};
+		F0DA87404F70FC366138C4288F51DE3F /* HTSocket */ = {
+			isa = PBXGroup;
+			children = (
+				102096C88191819E134662DEA99482C5 /* Address.swift */,
+				50EE21EB866577B57D16FCC4A58FC625 /* IO.swift */,
+				C8F7EC877508FD6F712E13FE7BA0A274 /* Log.swift */,
+				3DEC557ABB2D0F79AAC9D04816DF1A82 /* Socket.swift */,
+				0FFC9622A9CFE6A70EF6A406EA28FCFE /* TCP.swift */,
+				8C4717E827E4E26B2E8FAD409A591C46 /* TLS.swift */,
+				E99E0BBFE3F06F87500A736F51116491 /* UDP.swift */,
+				7E10A5EC5524C80DA29AA238CABEA116 /* WebProxy.swift */,
+				C2B9D380EEA8E1E4CC21EEE1E6FCC172 /* Support Files */,
+			);
+			name = HTSocket;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1DA666736CD7CD7916DA4E58290F2963 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7E621E4D70B8FE45992DF68417BE549 /* Pods-HTProxyExample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		763DCB1C815D778D9B11A1766C07B2CE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				088CAB5F7AF09A3C1BF1642A1A35AF2D /* HTSocket-macOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A26B51F628E7FC0D7286AB0343B867A3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7C30353D694CFB5C4274FCCD391EA15 /* Pods-HTSocketExample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F46F09FF71138E1A0A8B6843E1864B56 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82095CDDB327C155C5ABD8A97D90F064 /* HTSocket-iOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7CAD59380E544FD7147BE889E4BB1393 /* HTSocket-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A431260D42043A99CC42BD7616BDB201 /* Build configuration list for PBXNativeTarget "HTSocket-macOS" */;
+			buildPhases = (
+				1E11D9DA85E735758EAB638F773DAF20 /* Sources */,
+				03FEABAF9F9A1846D7CBC6F449803EE6 /* Frameworks */,
+				763DCB1C815D778D9B11A1766C07B2CE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HTSocket-macOS";
+			productName = "HTSocket-macOS";
+			productReference = CC50057B1864D68547295DE8FEC0E779 /* HTSocket.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9C7A4FE956B009EAA4A68FB7FC370E42 /* Pods-HTProxyExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03F14E89C5AE5B95FCBC51FA12E2149A /* Build configuration list for PBXNativeTarget "Pods-HTProxyExample" */;
+			buildPhases = (
+				2FF24D2AB67CCAE1DA3C5D50992AF028 /* Sources */,
+				2B49358A13312EE4EC6A56500F9B46A7 /* Frameworks */,
+				1DA666736CD7CD7916DA4E58290F2963 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9671E1F704DA92806B7CF564EAA9A468 /* PBXTargetDependency */,
+			);
+			name = "Pods-HTProxyExample";
+			productName = "Pods-HTProxyExample";
+			productReference = 6DBD5001BF72173F97EC00BF4DBA702A /* Pods_HTProxyExample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9C8AC391DC6FC78EAC8142533E380D0C /* HTSocket-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AE1B7A9DB8F8056C27845FDC001A361 /* Build configuration list for PBXNativeTarget "HTSocket-iOS" */;
+			buildPhases = (
+				A39EBA2861563639726C317FC3EEAC15 /* Sources */,
+				4AF67575A522AC52F7810478345E52DF /* Frameworks */,
+				F46F09FF71138E1A0A8B6843E1864B56 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HTSocket-iOS";
+			productName = "HTSocket-iOS";
+			productReference = 5FC2919501A7F0275C94B60564B983FD /* HTSocket.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AE957CF223E82E8F77D7EAAC5560AC50 /* Pods-HTSocketExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68E691503D80D3069B6566437B035F50 /* Build configuration list for PBXNativeTarget "Pods-HTSocketExample" */;
+			buildPhases = (
+				9DB2C3EBC25CFE231AFCD10CBC4EA5DF /* Sources */,
+				19FA3534D26C8BC53455FE1F3FF248AC /* Frameworks */,
+				A26B51F628E7FC0D7286AB0343B867A3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14C80073E54151F2BDB08EAB2296D5C4 /* PBXTargetDependency */,
+			);
+			name = "Pods-HTSocketExample";
+			productName = "Pods-HTSocketExample";
+			productReference = 315C30811D4000162939E602EA82997B /* Pods_HTSocketExample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 7DD71C248D567DD3819C0CED38F64285 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C8AC391DC6FC78EAC8142533E380D0C /* HTSocket-iOS */,
+				7CAD59380E544FD7147BE889E4BB1393 /* HTSocket-macOS */,
+				9C7A4FE956B009EAA4A68FB7FC370E42 /* Pods-HTProxyExample */,
+				AE957CF223E82E8F77D7EAAC5560AC50 /* Pods-HTSocketExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E11D9DA85E735758EAB638F773DAF20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CA87EC737CEB410DF0F9A5C4357BAB1 /* Address.swift in Sources */,
+				7C9AEECA787CBED9B747AC1EAD7F07D2 /* HTSocket-macOS-dummy.m in Sources */,
+				60959C181231D19EF001CFE3B35E496C /* IO.swift in Sources */,
+				CD600989F0559F9ECD0CE637CA26C4CC /* Log.swift in Sources */,
+				C6B4A1C6679217029FD21A88E72D86FA /* Socket.swift in Sources */,
+				7125EE55270C711531C3E3D1CAAA30E3 /* TCP.swift in Sources */,
+				BA7735D8A34677B5D9FB821FED1EE3DD /* TLS.swift in Sources */,
+				F8EE35984C1AE66BCAFCFFB215F9D8D5 /* UDP.swift in Sources */,
+				5A004F955424D7170B9BA6D5FAF07BB4 /* WebProxy.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FF24D2AB67CCAE1DA3C5D50992AF028 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				326D0FF5CB595DF7FBC7A42FFA305C03 /* Pods-HTProxyExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DB2C3EBC25CFE231AFCD10CBC4EA5DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9057D8BFDCB59267EEBBAD24C83D4914 /* Pods-HTSocketExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A39EBA2861563639726C317FC3EEAC15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				552ECFCFBC8E82AD2EFC0985B63E606D /* Address.swift in Sources */,
+				896EDB24C6395915CE72CFF4E454B0CF /* HTSocket-iOS-dummy.m in Sources */,
+				FD48AE1F62B2F7DFD5FBFDEB334D09BE /* IO.swift in Sources */,
+				AE2A286AF3183F7B79A32563FD11FBA3 /* Log.swift in Sources */,
+				77267FA20F14973B12DF06954FE99B68 /* Socket.swift in Sources */,
+				2612091F3985F5DE6D2F9B4B8C5D4762 /* TCP.swift in Sources */,
+				706FAC5B53EF3C2ED7ED2D3E806D2FF8 /* TLS.swift in Sources */,
+				D50D805B1752DF0FB23B88DD9D09CC30 /* UDP.swift in Sources */,
+				B0E75BD5E731E5040446BC4F2563464E /* WebProxy.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14C80073E54151F2BDB08EAB2296D5C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "HTSocket-iOS";
+			target = 9C8AC391DC6FC78EAC8142533E380D0C /* HTSocket-iOS */;
+			targetProxy = 2BF8C0009C4D446B9882D081B7B72C20 /* PBXContainerItemProxy */;
+		};
+		9671E1F704DA92806B7CF564EAA9A468 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "HTSocket-macOS";
+			target = 7CAD59380E544FD7147BE889E4BB1393 /* HTSocket-macOS */;
+			targetProxy = FD6689C2E74C47F311ECCF83131AA3D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D076B10809FB56C916291A0F7586649 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35CE4B59F5BAD01A1F373346A6E1866C /* Pods-HTSocketExample.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HTSocketExample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HTSocketExample/Pods-HTSocketExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_HTSocketExample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1D54F8D518663089EDEBB6C93C7AB2F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D78C5AD8D4539ECDF7BF12B1BCB4E9D /* Pods-HTProxyExample.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-HTProxyExample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-HTProxyExample/Pods-HTProxyExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_HTProxyExample;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3DF7A9E5603FD0EE793127DFD7632E92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		41E49F3212EC272E4A1E8EEF53577DF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0A887502CEEBE971EF489D9BD6411D5 /* HTSocket-macOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/HTSocket-macOS/HTSocket-macOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HTSocket-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/HTSocket-macOS/HTSocket-macOS.modulemap";
+				PRODUCT_NAME = HTSocket;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9C2678A08E72E3C614CE5A8CE06A37C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0A887502CEEBE971EF489D9BD6411D5 /* HTSocket-macOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/HTSocket-macOS/HTSocket-macOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HTSocket-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/HTSocket-macOS/HTSocket-macOS.modulemap";
+				PRODUCT_NAME = HTSocket;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AED43444352B751E976A6300CA6AED38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23947E3F7AD637256D0C23DC0AD445D9 /* HTSocket-iOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HTSocket-iOS/HTSocket-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HTSocket-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HTSocket-iOS/HTSocket-iOS.modulemap";
+				PRODUCT_NAME = HTSocket;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D822B0EC527B10E6C9A2EB3F65433551 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		E2144BDF7BD8A6F8F1E7B0A065DBEC7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 714426A8F3DBBB949A03F05DD1E88A0B /* Pods-HTSocketExample.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HTSocketExample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HTSocketExample/Pods-HTSocketExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_HTSocketExample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E50F97752FCFF9EFC0D93B82E35C7A9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23947E3F7AD637256D0C23DC0AD445D9 /* HTSocket-iOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HTSocket-iOS/HTSocket-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HTSocket-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HTSocket-iOS/HTSocket-iOS.modulemap";
+				PRODUCT_NAME = HTSocket;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F53E22EDF007BECC1A05D17082E5FF6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7D9FE082A7EE7FF634CF7AB89CB764C /* Pods-HTProxyExample.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-HTProxyExample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-HTProxyExample/Pods-HTProxyExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_HTProxyExample;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03F14E89C5AE5B95FCBC51FA12E2149A /* Build configuration list for PBXNativeTarget "Pods-HTProxyExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F53E22EDF007BECC1A05D17082E5FF6C /* Debug */,
+				1D54F8D518663089EDEBB6C93C7AB2F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DF7A9E5603FD0EE793127DFD7632E92 /* Debug */,
+				D822B0EC527B10E6C9A2EB3F65433551 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68E691503D80D3069B6566437B035F50 /* Build configuration list for PBXNativeTarget "Pods-HTSocketExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D076B10809FB56C916291A0F7586649 /* Debug */,
+				E2144BDF7BD8A6F8F1E7B0A065DBEC7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AE1B7A9DB8F8056C27845FDC001A361 /* Build configuration list for PBXNativeTarget "HTSocket-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E50F97752FCFF9EFC0D93B82E35C7A9D /* Debug */,
+				AED43444352B751E976A6300CA6AED38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A431260D42043A99CC42BD7616BDB201 /* Build configuration list for PBXNativeTarget "HTSocket-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C2678A08E72E3C614CE5A8CE06A37C1 /* Debug */,
+				41E49F3212EC272E4A1E8EEF53577DF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

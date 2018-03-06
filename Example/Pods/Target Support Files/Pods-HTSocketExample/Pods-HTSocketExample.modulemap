@@ -1,0 +1,6 @@
+framework module Pods_HTSocketExample {
+  umbrella header "Pods-HTSocketExample-umbrella.h"
+
+  export *
+  module * { export * }
+}

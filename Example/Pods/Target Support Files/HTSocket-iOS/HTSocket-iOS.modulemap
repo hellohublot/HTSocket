@@ -1,0 +1,6 @@
+framework module HTSocket {
+  umbrella header "HTSocket-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
