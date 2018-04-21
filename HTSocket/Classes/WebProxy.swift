@@ -37,6 +37,8 @@ public struct Web {
 	
 	public static let kURLPIEString = "/"
 	
+	public static let kDoubleDout = "\""
+	
 }
 
 public struct TLSPair {
@@ -60,7 +62,9 @@ public protocol WebProxyManager: class {
 	
 	func tlsHandShakeFromHost(_ host: String, connectionIndex: Int) -> TLSPair?
 	
-	func clientHandShakeFail(_ host: String, connectionIndex: Int)
+	func clientHandShakeResult(_ host: String, _ success: Bool, connectionIndex: Int)
+	
+	func remoteHandShakeResult(_ host: String,  _ success: Bool, connectionIndex: Int)
 	
 	func closeConnection(connectionIndex: Int)
 	
@@ -88,7 +92,11 @@ public extension WebProxyManager {
 		return nil
 	}
 	
-	func clientHandShakeFail(_ host: String, connectionIndex: Int) {
+	func clientHandShakeResult(_ host: String, _ success: Bool, connectionIndex: Int) {
+		
+	}
+	
+	func remoteHandShakeResult(_ host: String,  _ success: Bool, connectionIndex: Int) {
 		
 	}
 	
@@ -130,7 +138,7 @@ public struct Parse {
 	
 	public enum RequestParse {
 		case half(data: Data)
-		case success(data: Data, main: [String], header: [[String: String]], body: String, host: String, port: UInt16, istls: Bool, iftlsReply: Data)
+		case success(data: Data, main: [String], header: [[String: String]], body: Data, host: String, port: UInt16, istls: Bool, iftlsReply: Data)
 		case fail(data: Data)
 	}
 	
@@ -161,7 +169,7 @@ public struct Parse {
 		
 		let titlestring = String(message[message.startIndex..<titlerange.lowerBound])
 		let headerstring: String = String(message[min(titlerange.upperBound, headerrange.lowerBound)..<headerrange.lowerBound])
-		let bodystring = String(message[headerrange.lowerBound..<message.endIndex])
+		let bodydata = Data(data[data.index(data.startIndex, offsetBy: headerrange.upperBound.encodedOffset)..<data.endIndex])
 		
 		var titlelist = titlestring.components(separatedBy: Web.kSpace)
 		let headerlist = headerstring.components(separatedBy: Web.kSeparator)
@@ -170,7 +178,7 @@ public struct Parse {
 		for headerkeyvalue in headerlist {
 			if let range = headerkeyvalue.range(of: Web.kSaySpace) {
 				let key = String(headerkeyvalue[headerkeyvalue.startIndex..<range.lowerBound])
-				let value = String(headerkeyvalue[range.lowerBound..<headerkeyvalue.endIndex])
+				let value = String(headerkeyvalue[range.upperBound..<headerkeyvalue.endIndex])
 				headerkeyvaluelist.append([key: value])
 			}
 		}
@@ -193,7 +201,7 @@ public struct Parse {
 			return .fail(data: data)
 		}
 		
-		var temphost: String?
+		var temphost = ""
 		for item in headerlist {
 			let range = item.range(of: Web.kSaySpace)
 			if let range = range {
@@ -223,9 +231,7 @@ public struct Parse {
 		if hostport.count > 0 {
 			temphost = hostport
 		}
-		guard var host = temphost else {
-			return .fail(data: data)
-		}
+		var host = temphost
 		
 		let list = host.components(separatedBy: Web.kSay)
 		if list.count >= 2 {
@@ -250,7 +256,7 @@ public struct Parse {
 		titlelist[1] = titleurl
 		
 		
-		return .success(data: data, main: titlelist, header: headerkeyvaluelist, body: bodystring, host: host, port: port, istls: istls, iftlsReply: replyData)
+		return .success(data: data, main: titlelist, header: headerkeyvaluelist, body: bodydata, host: host, port: port, istls: istls, iftlsReply: replyData)
 		
 	}
 	
@@ -337,12 +343,13 @@ open class WebProxy: TCPDelegate {
 							let tlspair = self.manager?.tlsHandShakeFromHost(host, connectionIndex: connection.connectionIndex)
 							self.proxyCenterQueue.async {
 								if let tlspair = tlspair {
-									connection.remote?.starttls(tlspair.remotetls, maybeFailHandler)
+									connection.remote?.starttls(tlspair.remotetls, { (issuccess, client) in
+										maybeFailHandler?(issuccess, client)
+										self.manager?.remoteHandShakeResult(host, issuccess, connectionIndex: connection.connectionIndex)
+									})
 									connection.client.starttls(tlspair.clienttls, { (issuccess, client) in
 										maybeFailHandler?(issuccess, client)
-										if issuccess == false {
-											self.manager?.clientHandShakeFail(host, connectionIndex: connection.connectionIndex)
-										}
+										self.manager?.clientHandShakeResult(host, issuccess, connectionIndex: connection.connectionIndex)
 									})
 									connection.client.write(iftlsReplyData, maybeFailHandler)
 									connection.state = .readyforward(parseread: true, host: host, lastRequest: nil, lastisremote: true)

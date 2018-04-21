@@ -65,32 +65,42 @@ open class Address: NSObject {
 	}
 	
 	public static func systemHost() -> String? {
-		var addresses = [String: String]()
+		var addresses = [String: [String]]()
 		var ifaddr : UnsafeMutablePointer<ifaddrs>? = nil
 		if getifaddrs(&ifaddr) == 0 {
 			var lastifaddr = ifaddr
 			while let lastaddr = lastifaddr {
+				lastifaddr = lastaddr.pointee.ifa_next
 				let flags = Int32(lastaddr.pointee.ifa_flags)
-				var addr = lastaddr.pointee.ifa_addr.pointee
-				if (flags & (IFF_UP | IFF_RUNNING | IFF_LOOPBACK)) == (IFF_UP | IFF_RUNNING) {
-					if addr.sa_family == UInt8(AF_INET) || addr.sa_family == UInt8(AF_INET6) {
-						var hostname = [CChar](repeating: 0, count: Int(NI_MAXHOST))
-						if (getnameinfo(&addr, socklen_t(addr.sa_len), &hostname, socklen_t(hostname.count),nil, socklen_t(0), NI_NUMERICHOST) == 0) {
-							if let address = String(validatingUTF8:hostname) {
-								let interfacename = String(cString: lastaddr.pointee.ifa_name)
-								addresses[interfacename] = address
-							}
+				guard (flags & (IFF_UP | IFF_RUNNING | IFF_LOOPBACK)) == (IFF_UP | IFF_RUNNING) else {
+					continue
+				}
+				guard let addr = lastaddr.pointee.ifa_addr, addr.pointee.sa_family == UInt8(AF_INET) || addr.pointee.sa_family == UInt8(AF_INET6) else {
+					continue
+				}
+				var hostname = [CChar](repeating: 0, count: Int(NI_MAXHOST))
+				if getnameinfo(addr, socklen_t(addr.pointee.sa_len), &hostname, socklen_t(hostname.count), nil, socklen_t(0), NI_NUMERICHOST) == 0, let address = String(validatingUTF8:hostname) {
+					let interfacename = String(cString: lastaddr.pointee.ifa_name)
+					guard address.contains("%") == false else {
+						continue
+					}
+					if let _ = addresses[interfacename] {
+						if addr.pointee.sa_family == UInt8(AF_INET6) {
+							addresses[interfacename]?.insert(address, at: 0)
+						} else {
+							addresses[interfacename]?.append(address)
 						}
+					} else {
+						addresses[interfacename] = [address]
 					}
 				}
-				lastifaddr = lastaddr.pointee.ifa_next
 			}
 			freeifaddrs(ifaddr)
-			if let wifi = addresses["en0"] {
+			if let wifi = addresses["en0"]?.first {
 				return wifi
-			} else if let _ = addresses["pdp_ip0"] {
-				if let hotpoint = addresses["bridge100"] {
-					return hotpoint
+			} else if let _ = addresses["pdp_ip0"]?.first {
+				if let _ = addresses["bridge100"]?.first {
+					return "127.0.0.1"
 				} else {
 					return "127.0.0.1"
 				}
