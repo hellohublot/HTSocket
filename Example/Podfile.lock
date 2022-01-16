@@ -1,0 +1,16 @@
+PODS:
+  - HTSocket (0.1.0)
+
+DEPENDENCIES:
+  - HTSocket (from `../`)
+
+EXTERNAL SOURCES:
+  HTSocket:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HTSocket: aec3ff7617eeaec0ccea506e888f14afa5055b1f
+
+PODFILE CHECKSUM: 18e0a6bc2b9896222bf62b6112a1a12a5b74313d
+
+COCOAPODS: 1.11.2

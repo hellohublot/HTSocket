@@ -1,0 +1,4 @@
+use_frameworks!
+target 'HTSocketExample' do
+	pod 'HTSocket', :path => '../'
+end
