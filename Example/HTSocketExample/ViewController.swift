@@ -8,7 +8,7 @@
 import UIKit
 import HTSocket
 
-enum HTSocketActionType: String {
+enum HTSocketActionType: String, CaseIterable {
 
     case tcpclient
 
@@ -20,23 +20,13 @@ enum HTSocketActionType: String {
 
     case webproxy
 
-    static func packModelArray() -> [HTSocketActionType] {
-        return [
-            .tcpclient,
-            .tcpserver,
-            .udpclient,
-            .udpserver,
-            .webproxy
-        ]
-    }
-
 }
 
 
 class ViewController: UIViewController {
 
     lazy var modelArray: [HTSocketActionType] = {
-        let modelArray = HTSocketActionType.packModelArray()
+        let modelArray = HTSocketActionType.allCases
         return modelArray
     }()
 
