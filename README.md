@@ -1,16 +1,26 @@
+## HTSocket
+HTSocket is a asynchronous network proxy server library that supports rewriting https packages, You can import the certificate, and then you can read the https packages on the iOS device, and you can rewrite the https package
+
 ## Features
 
-- support tcp + tls
-- support udp
-- support https webProxy, it can modified request and response
+- [x] Support domain name resolution to ip address
+- [x] Support simulated TCP TLS handshake
+- [x] Support for UDP connections
+- [x] Support HTTP packet automatic parsing
+- [x] Support for reading and writing HTTPS request and response packets
+- [x] Support logging to Console.app because it usually runs in Extension
 
-## Usage
-
-[Example](./Example/HTSocketExample/ViewController.swift)
+## Install
 
 ```ruby
 pod 'HTSocket', :git => 'https://github.com/hellohublot/HTSocket.git'
 ```
+
+## Usage
+
+[View Full Example](./Example/HTSocketExample/ViewController.swift)
+
+
 ```swift
 // tcp client
 let socket = TCP.init(Address.init("www.baidu.com", 443))
@@ -50,6 +60,6 @@ func tlsHandShakeFromHost(_ host: String, connectionIndex: Int) -> TLSPair? {
 }
 ```
 
-## Author
+## Contact
 
 hellohublot, hublot@aliyun.com
